@@ -15,7 +15,7 @@ fetch("data/data.json")
         updateCartDisplay();
     });
 
-// Render product cards
+// Render show the product cards
 function renderProducts() {
     productGrid.innerHTML = products
         .map((product) => {
@@ -171,6 +171,7 @@ function removeFromCart(productId) {
 // Save cart to localStorage
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
+    console.log(localStorage);
 }
 
 // Show notifications
